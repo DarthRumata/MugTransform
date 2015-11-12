@@ -12,9 +12,7 @@
 
 @interface BCMugController ()
 
-@property (nonatomic, strong) BCMeshTransformView *transformViewer;
 @property (nonatomic, strong) UISlider *slider;
-@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIView *frontSide;
 @property (nonatomic, strong) UIView *backSide;
 
@@ -40,10 +38,10 @@ UIImage *secondImage;
     rotatedView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:rotatedView];
     
-    self.frontSide = [[UIView alloc]initWithFrame:self.view.bounds];
-     [rotatedView addSubview:self.frontSide];
-    self.backSide = [[UIView alloc]initWithFrame:self.view.bounds];
-    [rotatedView addSubview:self.backSide];
+    self.frontSide = [[UIView alloc] initWithFrame: self.view.bounds];
+    [rotatedView addSubview: self.frontSide];
+    self.backSide = [[UIView alloc] initWithFrame: self.view.bounds];
+    [rotatedView addSubview: self.backSide];
     
     UIImage *image = [UIImage imageNamed:@"sample.jpg"];
     CGSize minSize = [self calculateMinSizeOfImage];
@@ -56,10 +54,6 @@ UIImage *secondImage;
     secondImage = [image cropRectImage: CGRectMake(croppedWidth, 0, croppedWidth, croppedHeight)];
     
     // Do any additional setup after loading the view.
-    [self createFrontSide];
-    [self createBackSide];
-
-    
     self.slider = [[UISlider alloc] initWithFrame:CGRectMake(10, 350, 300, 30)];
     self.slider.minimumValue = 0;
     self.slider.maximumValue = 1;
@@ -73,7 +67,10 @@ UIImage *secondImage;
     [rotateButton setTitle:@"Rotate" forState:UIControlStateNormal];
     [rotateButton addTarget:self action:@selector(rotate) forControlEvents:UIControlEventTouchUpInside];
     
-    [self updateTransform];
+    [self createFrontSide];
+    [self createBackSide];
+    
+    self.backSide.hidden = TRUE;
 }
 
 - (void)createFrontSide {
@@ -85,49 +82,21 @@ UIImage *secondImage;
     cupView.frame = CGRectMake(x, 100, size.width, size.height);
     [self.frontSide addSubview:cupView];
     
-    self.transformViewer = [[BCMeshTransformView alloc] initWithFrame:CGRectMake(x + 1,
+    BCMeshTransformView *transformerView = [[BCMeshTransformView alloc] initWithFrame:CGRectMake(x + 1,
                                                                                  cupView.frame.origin.y + 20,
                                                                                  size.width - 62,
                                                                                  size.height + 40
                                                                                  )];
-    self.transformViewer.backgroundColor = [UIColor clearColor];
-    // self.transformViewer.diffuseLightFactor = 0;
-    [self.frontSide addSubview:self.transformViewer];
-    
-    self.imageView = [[UIImageView alloc] initWithImage: firstImage];
-    self.imageView.frame = CGRectMake(
-                                      0,
-                                      0,
-                                      self.transformViewer.bounds.size.width,
-                                      self.transformViewer.bounds.size.height - 65
-                                      );
-    [self.transformViewer.contentView addSubview: self.imageView];
-}
-
-- (void)createBackSide {
-    self.backSide = [[UIView alloc]initWithFrame:self.view.bounds];
-    CGSize size = CGSizeMake(190, 180);
-    CGFloat x = self.view.center.x - size.width / 2;
-    UIImageView *cupView = [[UIImageView alloc]initWithImage:[UIImage imageNamed: @"Coffee_Cup.png"]];
-    cupView.transform = CGAffineTransformMakeScale(-1, 1);
-    cupView.frame = CGRectMake(x, 100, size.width, size.height);
-    [self.backSide addSubview:cupView];
-    
-    BCMeshTransformView *transformerView = [[BCMeshTransformView alloc] initWithFrame:CGRectMake(x + 62,
-                                                                                 cupView.frame.origin.y + 20,
-                                                                                 size.width - 1,
-                                                                                 size.height + 40
-                                                                                 )];
     transformerView.backgroundColor = [UIColor clearColor];
     // self.transformViewer.diffuseLightFactor = 0;
-    [self.backSide addSubview:transformerView];
+    [self.frontSide addSubview:transformerView];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage: secondImage];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: firstImage];
     imageView.frame = CGRectMake(
                                       0,
                                       0,
                                       transformerView.bounds.size.width,
-                                     transformerView.bounds.size.height - 65
+                                      transformerView.bounds.size.height - 65
                                       );
     [transformerView.contentView addSubview: imageView];
     
@@ -135,17 +104,41 @@ UIImage *secondImage;
     transformerView.meshTransform = [self simpleMeshTransform: newValue];
 }
 
+- (void)createBackSide {
+    CGSize size = CGSizeMake(190, 180);
+    CGFloat x = self.view.center.x - size.width / 2;
+    UIImageView *cupView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"Coffee_Cup.png"]];
+    cupView.transform = CGAffineTransformMakeScale(-1, 1);
+    cupView.frame = CGRectMake(x, 100, size.width, size.height);
+    [self.backSide addSubview:cupView];
+    
+    BCMeshTransformView *transformerView = [[BCMeshTransformView alloc] initWithFrame:CGRectMake(x + 61,
+                                                                                                 cupView.frame.origin.y + 20,
+                                                                                                 size.width - 62,
+                                                                                                 size.height + 40
+                                                                                                 )];
+    transformerView.backgroundColor = [UIColor clearColor];
+    // self.transformViewer.diffuseLightFactor = 0;
+    [self.backSide addSubview:transformerView];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: secondImage];
+    imageView.frame = CGRectMake(
+                                 0,
+                                 0,
+                                 transformerView.bounds.size.width,
+                                 transformerView.bounds.size.height - 65
+                                 );
+    [transformerView.contentView addSubview: imageView];
+    
+    CGFloat newValue = self.slider.value;
+    transformerView.meshTransform = [self simpleMeshTransform: newValue];
+}
+
 - (void)rotate {
+    self.backSide.hidden = FALSE;
     UIView *fromView = self.frontSide.superview ? self.frontSide : self.backSide;
     UIView *toView = self.frontSide.superview ? self.backSide : self.frontSide;
     [UIView transitionFromView:fromView toView:toView duration:0.6 options:UIViewAnimationOptionTransitionFlipFromRight completion:nil];
-}
-
-- (void)updateTransform {
-    CGFloat newValue = self.slider.value;
-    self.transformViewer.meshTransform = [self simpleMeshTransform: newValue];
-    
-    NSLog(@"%f %@", newValue, self.imageView);
 }
 
 - (BCMeshTransform *)simpleMeshTransform: (CGFloat)part {
