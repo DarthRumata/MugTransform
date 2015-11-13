@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		859C05781BF4D32E00538457 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 859C05771BF4D32E00538457 /* UIImage+Crop.m */; settings = {ASSET_TAGS = (); }; };
+		859929211BF61E6A00C64C59 /* BCMeshBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599290E1BF61E6A00C64C59 /* BCMeshBuffer.m */; };
+		859929221BF61E6A00C64C59 /* BCMeshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 859929101BF61E6A00C64C59 /* BCMeshContentView.m */; };
+		859929231BF61E6A00C64C59 /* BCMeshShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 859929111BF61E6A00C64C59 /* BCMeshShader.fsh */; };
+		859929241BF61E6A00C64C59 /* BCMeshShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 859929131BF61E6A00C64C59 /* BCMeshShader.m */; };
+		859929251BF61E6A00C64C59 /* BCMeshShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 859929141BF61E6A00C64C59 /* BCMeshShader.vsh */; };
+		859929261BF61E6A00C64C59 /* BCMeshTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 859929161BF61E6A00C64C59 /* BCMeshTexture.m */; };
+		859929271BF61E6A00C64C59 /* BCMeshTransform+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 859929181BF61E6A00C64C59 /* BCMeshTransform+Interpolation.m */; };
+		859929281BF61E6A00C64C59 /* BCMeshTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8599291A1BF61E6A00C64C59 /* BCMeshTransform.mm */; };
+		859929291BF61E6A00C64C59 /* BCMeshTransformAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599291C1BF61E6A00C64C59 /* BCMeshTransformAnimation.m */; };
+		8599292A1BF61E6A00C64C59 /* BCMeshTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599291E1BF61E6A00C64C59 /* BCMeshTransformView.m */; };
+		8599292B1BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 859929201BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.m */; };
+		8599292E1BF61F0200C64C59 /* YALEllipseTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599292D1BF61F0200C64C59 /* YALEllipseTransformView.m */; };
+		859C05781BF4D32E00538457 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 859C05771BF4D32E00538457 /* UIImage+Crop.m */; };
 		92310ABA1BECB8C300ED82B0 /* Coffee_Cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 92310AB91BECB8C300ED82B0 /* Coffee_Cup.png */; };
 		92310ABC1BECD47400ED82B0 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92310ABB1BECD47400ED82B0 /* sample.jpg */; };
 		92DB85131BEB6CF9008C3A47 /* BCMugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DB85121BEB6CF9008C3A47 /* BCMugController.m */; };
@@ -19,16 +31,6 @@
 		9819A5E61920020400769705 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A5E51920020400769705 /* main.m */; };
 		9819A5EA1920020400769705 /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A5E91920020400769705 /* BCAppDelegate.m */; };
 		9819A6161920036500769705 /* BCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6151920036500769705 /* BCDemoViewController.m */; };
-		9819A62F1920058300769705 /* BCMeshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A61D1920058300769705 /* BCMeshContentView.m */; };
-		9819A6301920058300769705 /* BCMeshShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 9819A61E1920058300769705 /* BCMeshShader.fsh */; };
-		9819A6311920058300769705 /* BCMeshShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6201920058300769705 /* BCMeshShader.m */; };
-		9819A6321920058300769705 /* BCMeshShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 9819A6211920058300769705 /* BCMeshShader.vsh */; };
-		9819A6331920058300769705 /* BCMeshTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6231920058300769705 /* BCMeshTexture.m */; };
-		9819A6341920058300769705 /* BCMeshTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6251920058300769705 /* BCMeshTransform.mm */; };
-		9819A6351920058300769705 /* BCMeshTransform+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6271920058300769705 /* BCMeshTransform+Interpolation.m */; };
-		9819A6361920058300769705 /* BCMeshTransformAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6291920058300769705 /* BCMeshTransformAnimation.m */; };
-		9819A6371920058300769705 /* BCMeshTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A62B1920058300769705 /* BCMeshTransformView.m */; };
-		9819A6381920058300769705 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A62D1920058300769705 /* BCMutableMeshTransform+Convenience.m */; };
 		9819A63B192005FC00769705 /* BCZoomDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A63A192005FC00769705 /* BCZoomDemoViewController.m */; };
 		9819A63E1920061000769705 /* BCCurtainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A63D1920061000769705 /* BCCurtainDemoViewController.m */; };
 		9819A6411920072800769705 /* BCDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A6401920072800769705 /* BCDemoTableViewController.m */; };
@@ -36,13 +38,34 @@
 		9819A64919200E6E00769705 /* BCMeshTransform+DemoTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A64819200E6E00769705 /* BCMeshTransform+DemoTransforms.m */; };
 		9819A66E192010DB00769705 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9819A66D192010DB00769705 /* Images.xcassets */; };
 		9819A67319211DCA00769705 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9819A67219211DCA00769705 /* OpenGLES.framework */; };
-		985F8D91192149320090D0D7 /* BCMeshBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9819A61B1920058300769705 /* BCMeshBuffer.m */; };
 		985F8D94192297340090D0D7 /* BCJellyDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985F8D93192297340090D0D7 /* BCJellyDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		859C05761BF4D32E00538457 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
-		859C05771BF4D32E00538457 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		8599290D1BF61E6A00C64C59 /* BCMeshBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshBuffer.h; sourceTree = "<group>"; };
+		8599290E1BF61E6A00C64C59 /* BCMeshBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshBuffer.m; sourceTree = "<group>"; };
+		8599290F1BF61E6A00C64C59 /* BCMeshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshContentView.h; sourceTree = "<group>"; };
+		859929101BF61E6A00C64C59 /* BCMeshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshContentView.m; sourceTree = "<group>"; };
+		859929111BF61E6A00C64C59 /* BCMeshShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.fsh; sourceTree = "<group>"; };
+		859929121BF61E6A00C64C59 /* BCMeshShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshShader.h; sourceTree = "<group>"; };
+		859929131BF61E6A00C64C59 /* BCMeshShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshShader.m; sourceTree = "<group>"; };
+		859929141BF61E6A00C64C59 /* BCMeshShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.vsh; sourceTree = "<group>"; };
+		859929151BF61E6A00C64C59 /* BCMeshTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTexture.h; sourceTree = "<group>"; };
+		859929161BF61E6A00C64C59 /* BCMeshTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTexture.m; sourceTree = "<group>"; };
+		859929171BF61E6A00C64C59 /* BCMeshTransform+Interpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMeshTransform+Interpolation.h"; sourceTree = "<group>"; };
+		859929181BF61E6A00C64C59 /* BCMeshTransform+Interpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMeshTransform+Interpolation.m"; sourceTree = "<group>"; };
+		859929191BF61E6A00C64C59 /* BCMeshTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransform.h; sourceTree = "<group>"; };
+		8599291A1BF61E6A00C64C59 /* BCMeshTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCMeshTransform.mm; sourceTree = "<group>"; };
+		8599291B1BF61E6A00C64C59 /* BCMeshTransformAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformAnimation.h; sourceTree = "<group>"; };
+		8599291C1BF61E6A00C64C59 /* BCMeshTransformAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformAnimation.m; sourceTree = "<group>"; };
+		8599291D1BF61E6A00C64C59 /* BCMeshTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformView.h; sourceTree = "<group>"; };
+		8599291E1BF61E6A00C64C59 /* BCMeshTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformView.m; sourceTree = "<group>"; };
+		8599291F1BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMutableMeshTransform+Convenience.h"; sourceTree = "<group>"; };
+		859929201BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMutableMeshTransform+Convenience.m"; sourceTree = "<group>"; };
+		8599292C1BF61F0200C64C59 /* YALEllipseTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALEllipseTransformView.h; sourceTree = "<group>"; };
+		8599292D1BF61F0200C64C59 /* YALEllipseTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALEllipseTransformView.m; sourceTree = "<group>"; };
+		859C05761BF4D32E00538457 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Crop.h"; path = "../UIImage+Crop.h"; sourceTree = "<group>"; };
+		859C05771BF4D32E00538457 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Crop.m"; path = "../UIImage+Crop.m"; sourceTree = "<group>"; };
 		92310AB91BECB8C300ED82B0 /* Coffee_Cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coffee_Cup.png; sourceTree = "<group>"; };
 		92310ABB1BECD47400ED82B0 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		92DB85111BEB6CF9008C3A47 /* BCMugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMugController.h; sourceTree = "<group>"; };
@@ -61,26 +84,6 @@
 		9819A5FE1920020400769705 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9819A6141920036500769705 /* BCDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDemoViewController.h; sourceTree = "<group>"; };
 		9819A6151920036500769705 /* BCDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDemoViewController.m; sourceTree = "<group>"; };
-		9819A61A1920058300769705 /* BCMeshBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshBuffer.h; sourceTree = "<group>"; };
-		9819A61B1920058300769705 /* BCMeshBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshBuffer.m; sourceTree = "<group>"; };
-		9819A61C1920058300769705 /* BCMeshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshContentView.h; sourceTree = "<group>"; };
-		9819A61D1920058300769705 /* BCMeshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshContentView.m; sourceTree = "<group>"; };
-		9819A61E1920058300769705 /* BCMeshShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.fsh; sourceTree = "<group>"; };
-		9819A61F1920058300769705 /* BCMeshShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshShader.h; sourceTree = "<group>"; };
-		9819A6201920058300769705 /* BCMeshShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshShader.m; sourceTree = "<group>"; };
-		9819A6211920058300769705 /* BCMeshShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.vsh; sourceTree = "<group>"; };
-		9819A6221920058300769705 /* BCMeshTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTexture.h; sourceTree = "<group>"; };
-		9819A6231920058300769705 /* BCMeshTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTexture.m; sourceTree = "<group>"; };
-		9819A6241920058300769705 /* BCMeshTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransform.h; sourceTree = "<group>"; };
-		9819A6251920058300769705 /* BCMeshTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCMeshTransform.mm; sourceTree = "<group>"; };
-		9819A6261920058300769705 /* BCMeshTransform+Interpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMeshTransform+Interpolation.h"; sourceTree = "<group>"; };
-		9819A6271920058300769705 /* BCMeshTransform+Interpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMeshTransform+Interpolation.m"; sourceTree = "<group>"; };
-		9819A6281920058300769705 /* BCMeshTransformAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformAnimation.h; sourceTree = "<group>"; };
-		9819A6291920058300769705 /* BCMeshTransformAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformAnimation.m; sourceTree = "<group>"; };
-		9819A62A1920058300769705 /* BCMeshTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformView.h; sourceTree = "<group>"; };
-		9819A62B1920058300769705 /* BCMeshTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformView.m; sourceTree = "<group>"; };
-		9819A62C1920058300769705 /* BCMutableMeshTransform+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMutableMeshTransform+Convenience.h"; sourceTree = "<group>"; };
-		9819A62D1920058300769705 /* BCMutableMeshTransform+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMutableMeshTransform+Convenience.m"; sourceTree = "<group>"; };
 		9819A639192005FC00769705 /* BCZoomDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCZoomDemoViewController.h; sourceTree = "<group>"; };
 		9819A63A192005FC00769705 /* BCZoomDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCZoomDemoViewController.m; sourceTree = "<group>"; };
 		9819A63C1920061000769705 /* BCCurtainDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCurtainDemoViewController.h; sourceTree = "<group>"; };
@@ -111,6 +114,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8599290B1BF61E6A00C64C59 /* EllipseTransformView */ = {
+			isa = PBXGroup;
+			children = (
+				859C05761BF4D32E00538457 /* UIImage+Crop.h */,
+				859C05771BF4D32E00538457 /* UIImage+Crop.m */,
+				8599290C1BF61E6A00C64C59 /* BCMeshTransformView */,
+				8599292C1BF61F0200C64C59 /* YALEllipseTransformView.h */,
+				8599292D1BF61F0200C64C59 /* YALEllipseTransformView.m */,
+			);
+			path = EllipseTransformView;
+			sourceTree = "<group>";
+		};
+		8599290C1BF61E6A00C64C59 /* BCMeshTransformView */ = {
+			isa = PBXGroup;
+			children = (
+				8599290D1BF61E6A00C64C59 /* BCMeshBuffer.h */,
+				8599290E1BF61E6A00C64C59 /* BCMeshBuffer.m */,
+				8599290F1BF61E6A00C64C59 /* BCMeshContentView.h */,
+				859929101BF61E6A00C64C59 /* BCMeshContentView.m */,
+				859929111BF61E6A00C64C59 /* BCMeshShader.fsh */,
+				859929121BF61E6A00C64C59 /* BCMeshShader.h */,
+				859929131BF61E6A00C64C59 /* BCMeshShader.m */,
+				859929141BF61E6A00C64C59 /* BCMeshShader.vsh */,
+				859929151BF61E6A00C64C59 /* BCMeshTexture.h */,
+				859929161BF61E6A00C64C59 /* BCMeshTexture.m */,
+				859929171BF61E6A00C64C59 /* BCMeshTransform+Interpolation.h */,
+				859929181BF61E6A00C64C59 /* BCMeshTransform+Interpolation.m */,
+				859929191BF61E6A00C64C59 /* BCMeshTransform.h */,
+				8599291A1BF61E6A00C64C59 /* BCMeshTransform.mm */,
+				8599291B1BF61E6A00C64C59 /* BCMeshTransformAnimation.h */,
+				8599291C1BF61E6A00C64C59 /* BCMeshTransformAnimation.m */,
+				8599291D1BF61E6A00C64C59 /* BCMeshTransformView.h */,
+				8599291E1BF61E6A00C64C59 /* BCMeshTransformView.m */,
+				8599291F1BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.h */,
+				859929201BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.m */,
+			);
+			path = BCMeshTransformView;
+			sourceTree = "<group>";
+		};
 		9819A5CD1920020400769705 = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +185,11 @@
 		9819A5DF1920020400769705 /* BCMeshTransformViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9819A6191920054300769705 /* BCMeshTransformView */,
+				8599290B1BF61E6A00C64C59 /* EllipseTransformView */,
 				9819A64A19200E7000769705 /* Demo View Controllers */,
 				9819A5E81920020400769705 /* BCAppDelegate.h */,
 				9819A5E91920020400769705 /* BCAppDelegate.m */,
 				9819A63F1920072800769705 /* BCDemoTableViewController.h */,
-				859C05761BF4D32E00538457 /* UIImage+Crop.h */,
-				859C05771BF4D32E00538457 /* UIImage+Crop.m */,
 				9819A6401920072800769705 /* BCDemoTableViewController.m */,
 				9819A64719200E6E00769705 /* BCMeshTransform+DemoTransforms.h */,
 				9819A64819200E6E00769705 /* BCMeshTransform+DemoTransforms.m */,
@@ -172,34 +212,6 @@
 				9819A5E71920020400769705 /* BCMeshTransformViewDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9819A6191920054300769705 /* BCMeshTransformView */ = {
-			isa = PBXGroup;
-			children = (
-				9819A61A1920058300769705 /* BCMeshBuffer.h */,
-				9819A61B1920058300769705 /* BCMeshBuffer.m */,
-				9819A61C1920058300769705 /* BCMeshContentView.h */,
-				9819A61D1920058300769705 /* BCMeshContentView.m */,
-				9819A61F1920058300769705 /* BCMeshShader.h */,
-				9819A6201920058300769705 /* BCMeshShader.m */,
-				9819A6211920058300769705 /* BCMeshShader.vsh */,
-				9819A61E1920058300769705 /* BCMeshShader.fsh */,
-				9819A6221920058300769705 /* BCMeshTexture.h */,
-				9819A6231920058300769705 /* BCMeshTexture.m */,
-				9819A6241920058300769705 /* BCMeshTransform.h */,
-				9819A6251920058300769705 /* BCMeshTransform.mm */,
-				9819A6261920058300769705 /* BCMeshTransform+Interpolation.h */,
-				9819A6271920058300769705 /* BCMeshTransform+Interpolation.m */,
-				9819A6291920058300769705 /* BCMeshTransformAnimation.m */,
-				9819A6281920058300769705 /* BCMeshTransformAnimation.h */,
-				9819A62A1920058300769705 /* BCMeshTransformView.h */,
-				9819A62B1920058300769705 /* BCMeshTransformView.m */,
-				9819A62C1920058300769705 /* BCMutableMeshTransform+Convenience.h */,
-				9819A62D1920058300769705 /* BCMutableMeshTransform+Convenience.m */,
-			);
-			name = BCMeshTransformView;
-			path = ../../BCMeshTransformView;
 			sourceTree = "<group>";
 		};
 		9819A64A19200E7000769705 /* Demo View Controllers */ = {
@@ -272,12 +284,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9819A6321920058300769705 /* BCMeshShader.vsh in Resources */,
+				859929231BF61E6A00C64C59 /* BCMeshShader.fsh in Resources */,
 				92310ABA1BECB8C300ED82B0 /* Coffee_Cup.png in Resources */,
-				9819A6301920058300769705 /* BCMeshShader.fsh in Resources */,
 				9819A66E192010DB00769705 /* Images.xcassets in Resources */,
 				9819A64619200BC400769705 /* picture@2x.jpg in Resources */,
 				92310ABC1BECD47400ED82B0 /* sample.jpg in Resources */,
+				859929251BF61E6A00C64C59 /* BCMeshShader.vsh in Resources */,
 				9819A5E41920020400769705 /* InfoPlist.strings in Resources */,
 				92DB85151BEBD0B9008C3A47 /* Storyboard.storyboard in Resources */,
 			);
@@ -290,25 +302,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9819A6351920058300769705 /* BCMeshTransform+Interpolation.m in Sources */,
-				9819A6341920058300769705 /* BCMeshTransform.mm in Sources */,
 				92DB85131BEB6CF9008C3A47 /* BCMugController.m in Sources */,
 				9819A64919200E6E00769705 /* BCMeshTransform+DemoTransforms.m in Sources */,
-				9819A6371920058300769705 /* BCMeshTransformView.m in Sources */,
+				859929241BF61E6A00C64C59 /* BCMeshShader.m in Sources */,
+				859929271BF61E6A00C64C59 /* BCMeshTransform+Interpolation.m in Sources */,
 				9819A6411920072800769705 /* BCDemoTableViewController.m in Sources */,
+				8599292B1BF61E6A00C64C59 /* BCMutableMeshTransform+Convenience.m in Sources */,
 				9819A6161920036500769705 /* BCDemoViewController.m in Sources */,
-				9819A6311920058300769705 /* BCMeshShader.m in Sources */,
-				9819A6361920058300769705 /* BCMeshTransformAnimation.m in Sources */,
-				9819A6331920058300769705 /* BCMeshTexture.m in Sources */,
+				8599292E1BF61F0200C64C59 /* YALEllipseTransformView.m in Sources */,
+				8599292A1BF61E6A00C64C59 /* BCMeshTransformView.m in Sources */,
 				985F8D94192297340090D0D7 /* BCJellyDemoViewController.m in Sources */,
+				859929291BF61E6A00C64C59 /* BCMeshTransformAnimation.m in Sources */,
+				859929211BF61E6A00C64C59 /* BCMeshBuffer.m in Sources */,
+				859929221BF61E6A00C64C59 /* BCMeshContentView.m in Sources */,
 				9819A5E61920020400769705 /* main.m in Sources */,
-				985F8D91192149320090D0D7 /* BCMeshBuffer.m in Sources */,
+				859929281BF61E6A00C64C59 /* BCMeshTransform.mm in Sources */,
+				859929261BF61E6A00C64C59 /* BCMeshTexture.m in Sources */,
 				9819A63E1920061000769705 /* BCCurtainDemoViewController.m in Sources */,
 				9819A63B192005FC00769705 /* BCZoomDemoViewController.m in Sources */,
-				9819A62F1920058300769705 /* BCMeshContentView.m in Sources */,
 				859C05781BF4D32E00538457 /* UIImage+Crop.m in Sources */,
 				9819A5EA1920020400769705 /* BCAppDelegate.m in Sources */,
-				9819A6381920058300769705 /* BCMutableMeshTransform+Convenience.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +423,7 @@
 				INFOPLIST_FILE = "BCMeshTransformViewDemo/BCMeshTransformViewDemo-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bartoszciechanowski.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d3d0438e-35c9-4b66-8886-4fb2193636cd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -425,6 +439,7 @@
 				INFOPLIST_FILE = "BCMeshTransformViewDemo/BCMeshTransformViewDemo-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bartoszciechanowski.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d3d0438e-35c9-4b66-8886-4fb2193636cd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
